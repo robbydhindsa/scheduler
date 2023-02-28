@@ -47,7 +47,6 @@ export default function Application(props) {
     const appointment = {
       ...state.appointments[id],
       interview: null
-      // interview: null
     };
     const appointments = {
       ...state.appointments,
