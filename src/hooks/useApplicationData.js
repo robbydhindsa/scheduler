@@ -7,10 +7,22 @@ export default function useApplicationData() {
     day: "Monday",
     days: [],
     appointments: {},
-    interviewers: {}
+    interviewers: {},
   });
 
   const setDay = day => setState({ ...state, day });
+
+  function updateSpots(state, dayName, modifier) {
+    const daysArray = state.days;
+    let newDaysArray = [];
+    for (const day of daysArray) {
+      if (day.name === dayName) {
+        day.spots += modifier;
+      }
+      newDaysArray.push(day);
+    }
+    return newDaysArray;
+  }
 
   function bookInterview(id, interview) {
     const appointment = {
@@ -27,7 +39,8 @@ export default function useApplicationData() {
       .then(response => {
         setState({
           ...state,
-          appointments
+          appointments,
+          days: updateSpots(state, state.day, -1)
         });
         return response;
       })
@@ -48,7 +61,8 @@ export default function useApplicationData() {
         console.log("response:", response);
         setState({
           ...state,
-          appointments
+          appointments,
+          days: updateSpots(state, state.day, 1)
         });
         return response;
       })
