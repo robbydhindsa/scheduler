@@ -15,7 +15,11 @@ npm start
 ## Screenshots
 !["Screenshot of appointment booking form"](https://github.com/robbydhindsa/scheduler/blob/master/docs/booking-form.png?raw=true)
 
+---
+
 !["Screenshot of appointment being saved"](https://github.com/robbydhindsa/scheduler/blob/master/docs/saving-appointment.png?raw=true)
+
+---
 
 !["Screenshot of booked appointment"](https://github.com/robbydhindsa/scheduler/blob/master/docs/completed-form.png?raw=true)
 
