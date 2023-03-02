@@ -13,11 +13,11 @@ npm start
 ```
 
 ## Screenshots
-!["Screenshot of appointment booking form"]()
+!["Screenshot of appointment booking form"](https://github.com/robbydhindsa/scheduler/blob/master/docs/booking-form.png?raw=true)
 
-!["Screenshot of appointment being saved"]()
+!["Screenshot of appointment being saved"](https://github.com/robbydhindsa/scheduler/blob/master/docs/saving-appointment.png?raw=true)
 
-!["Screenshot of booked appointment"]()
+!["Screenshot of booked appointment"](https://github.com/robbydhindsa/scheduler/blob/master/docs/completed-form.png?raw=true)
 
 ## Testing Methods Used
 
@@ -38,10 +38,3 @@ npm run storybook
 ```sh
 npm run cypress
 ```
-
-
-
-screenshots: 
-page with appts already booked, form open on a slot, named filled in, interviewer selected (not Monday)
-
-page with appts already booked, confirm showing on a slot (diff day selected )
