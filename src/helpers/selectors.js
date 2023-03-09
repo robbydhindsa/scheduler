@@ -1,5 +1,5 @@
+// Returns an array of appointments for that day
 export function getAppointmentsForDay(state, day) {
-  //... returns an array of appointments for that day
   const daysArray = state.days;
   for (const d of daysArray) {
     if (d.name === day) {
@@ -13,6 +13,7 @@ export function getAppointmentsForDay(state, day) {
   return [];
 }
 
+// Returns an array of interviewers for that day
 export function getInterviewersForDay(state, day) {
   const daysArray = state.days;
   for (const d of daysArray) {
@@ -27,6 +28,7 @@ export function getInterviewersForDay(state, day) {
   return [];
 }
 
+// Return interview for specific timeslot
 export function getInterview(state, interview) {
   if (!interview) {
     return null;

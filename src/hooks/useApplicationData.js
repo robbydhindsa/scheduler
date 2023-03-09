@@ -22,6 +22,7 @@ export default function useApplicationData() {
 
   const setDay = day => setState({ ...state, day });
 
+  // Dynamically update number of spots remaining upon booking/deleting an appointment
   const updateSpots = function(state, appointments, id) {
     const dayObj = state.days.find(d => d.name === state.day);
 
@@ -46,8 +47,8 @@ export default function useApplicationData() {
       ...state.appointments,
       [id]: appointment
     };
-    console.log(id, interview);
 
+    // Update database upon appointment booking/edit
     return axios.put(`/api/appointments/${id}`, {interview})
       .then(response => {
         setState({
@@ -69,6 +70,7 @@ export default function useApplicationData() {
       [id]: appointment
     };
 
+    // Update database upon appointment deletion
     return axios.delete(`/api/appointments/${id}`)
       .then(response => {
         console.log("response:", response);
